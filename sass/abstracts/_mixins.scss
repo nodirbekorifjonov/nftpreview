@@ -1,0 +1,14 @@
+@mixin fontStyle($size, $weight, $height, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin responsive($size) {
+  @if $size == tablet {
+    @media screen and (max-width: 756px) {
+      @content;
+    }
+  }
+}

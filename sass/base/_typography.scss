@@ -1,0 +1,8 @@
+body {
+  @include fontStyle(1.8rem, 300, 1.44, $text-color);
+  font-family: "Outfit";
+}
+
+h4 {
+  @include fontStyle(1.6rem, 600, 1.25, $cyan-color);
+}

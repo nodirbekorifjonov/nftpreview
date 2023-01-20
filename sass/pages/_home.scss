@@ -1,0 +1,141 @@
+.card {
+  width: 35rem;
+  padding: 2.4rem 2.4rem 3.2rem;
+  margin: 0 auto;
+  background-color: $dark-blue-color;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+  border-radius: 15px;
+
+  &__img {
+    width: 30.2rem;
+    height: 30.2rem;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 2.4rem;
+
+    &:hover .card__img-hover {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__img-hover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+
+    img {
+      z-index: 1;
+    }
+  }
+
+  .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: $cyan-color;
+    z-index: 0;
+    border-radius: 8px;
+  }
+
+  &__title-link {
+    display: inline-block;
+    @include fontStyle(2.2rem, 600, 1.27, $white-color);
+    transition: 0.3s ease;
+    margin-bottom: 1.6rem;
+
+    &:hover {
+      color: $cyan-color;
+    }
+  }
+
+  &__description {
+    margin-bottom: 2.4rem;
+  }
+
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  &__payment {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    p {
+      font-weight: 600;
+      color: $cyan-color;
+    }
+  }
+
+  &__clock {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: #2e405a;
+    margin-bottom: 1.6rem;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    p {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    span {
+      cursor: pointer;
+      color: $white-color;
+
+      &:hover {
+        color: $cyan-color;
+      }
+    }
+  }
+
+  @include responsive(tablet) {
+    width: 32.7rem;
+    padding-bottom: 2.4rem;
+
+    &__img {
+      width: 27.8rem;
+      height: 27.8rem;
+
+      &-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__features {
+      font-size: 1.5rem;
+    }
+
+    .author {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
